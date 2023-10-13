@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" href="bootstrap.css">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS by linking to a CDN (Content Delivery Network) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+    <title>Co-projectHub editor</title>
+</head>
+<body>
+     
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code" onkeyup="ans()"></textarea>
+
+                    <label><i class="fa-brands fab fa-css3-alt"></i> CSS</label>
+                    <textarea id="css-code" onkeyup="ans()"></textarea>
+
+                    <label><i class="fa-brands fa-js"></i> JavaScript</label>
+                    <textarea id="js-code" onkeyup="ans()"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <iframe id="output"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS by linking to a CDN (Content Delivery Network) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     
+    <title>Code Editor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Co-projectHub</a>
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container header">
+        <div class="row justify-content-center">
+            <h2 class="header-content">Create New Project</h2>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <!-- Textarea for HTML code -->
+                    <textarea id="html-code" onkeyup="ans()"></textarea>
+
+                    <label><i class="fa-brands fab fa-css3-alt"></i> CSS</label>
+                    <!-- Textarea for CSS code -->
+                    <textarea id="css-code" onkeyup="ans()"></textarea>
+
+                    <label><i class="fa-brands fa-js"></i> JavaScript</label>
+                    <!-- Textarea for JavaScript code -->
+                    <textarea id="js-code" onkeyup="ans()"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <iframe id="output"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- Input field for Project Name -->
+                    <label for="projectName"><i class="fa-solid fa-file-code"></i> Project Name:</label>
+                    <input type="text" class="form-control" id="projectName">
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="form-group">
+                    <!-- Button to trigger the saveProject() function -->
+                    <button class="btn btn-primary mt-2 mt-4" onclick="saveProject()">Save Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Display Area -->
+    <div id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
